@@ -1,0 +1,247 @@
+:root {
+  --primary-color: #ff97cb;
+  --secondary-color: #b088f9;
+  --accent-color: #7fc8f8;
+  --dark-color: #614582;
+  --light-color: #ffddf4;
+  --danger-color: #ff6b6b;
+  --success-color: #a0e57c;
+  --font-cute: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-cute);
+  background: linear-gradient(135deg, #ffddf4 0%, #d5a6ff 100%);
+  background-attachment: fixed;
+  color: var(--dark-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.app-header h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: var(--dark-color);
+  text-shadow: 3px 3px 0 var(--accent-color);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.uwu-subtitle {
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.uwu-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  font-family: var(--font-cute);
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 var(--dark-color);
+  transition: all 0.2s;
+  position: relative;
+  outline: none;
+  min-width: 160px;
+  text-align: center;
+}
+
+.uwu-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 0 var(--dark-color);
+}
+
+.uwu-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--dark-color);
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: clamp(1rem, 5vw, 2rem);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 3px solid var(--primary-color);
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.card::before {
+  content: "✧･ﾟ";
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+.card::after {
+  content: "⋆˙⟡";
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+.question {
+  font-size: clamp(1.1rem, 4vw, 1.4rem);
+  margin-bottom: 1.5rem;
+  color: var(--dark-color);
+  text-align: center;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.answer-option {
+  background-color: white;
+  border: 2px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  color: var(--dark-color);
+  font-weight: 500;
+  width: 100%;
+  min-height: 44px; /* Minimum touch target size */
+}
+
+.answer-option:hover {
+  background-color: var(--light-color);
+  transform: translateX(5px);
+}
+
+.progress-container {
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin: 2rem 0;
+  overflow: hidden;
+  border: 2px solid var(--primary-color);
+  width: 100%;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transition: width 0.3s ease;
+}
+
+.app-footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--dark-color);
+  width: 100%;
+}
+
+.result-character {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.character-name {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  color: var(--primary-color);
+  text-shadow: 2px 2px 0 var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+
+.chart-container {
+  height: 300px;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.quiz-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question-counter {
+  text-align: center;
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+  font-weight: bold;
+  width: 100%;
+}
+
+.character-description {
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  line-height: 1.4;
+}
+
+.result-header {
+  width: 100%;
+  text-align: center;
+}
+
+/* Adjust for very small screens */
+@media (max-width: 360px) {
+  .card {
+    padding: 1rem;
+  }
+  
+  .card::before, .card::after {
+    font-size: 1rem;
+  }
+  
+  .answers {
+    gap: 8px;
+  }
+}
+
+@keyframes sparkle {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+.sparkle {
+  position: absolute;
+  pointer-events: none;
+  background: white;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: sparkle 1.5s infinite;
+}
